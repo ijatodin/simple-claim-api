@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ClaimController;
+use App\Http\Controllers\FileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Claim Route
+Route::post('claim-all', [ClaimController::class, 'index']);
+Route::post('claim-store', [ClaimController::class, 'store']);
+Route::post('claim-update', [ClaimController::class, 'update']);
+
+//File Route
+Route::post('file-store', [FileController::class, 'store']);
