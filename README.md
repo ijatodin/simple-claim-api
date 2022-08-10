@@ -13,7 +13,8 @@ Assuming you have installed composer and php environment;
 
 1. Run `composer install` to install all dependencies.
 2. Edit the `.env` file for the database info and connection.
-3. Run `php artisan migrate` to migrate table into DB.
-4. Run `php artisan optimize` for optimization.
-5. Run `php artisan serve` to run the API server.
-6. Navigate to the Front-end URL for testing. 
+3. Run `php artisan storage:link` to make symbolic link for the storage and public folder.
+4. Run `php artisan migrate` to migrate table into DB.
+5. Run `php artisan optimize` for optimization.
+6. Run `php artisan serve` to run the API server.
+7. Navigate to the Front-end URL for testing. 
